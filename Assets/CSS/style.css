@@ -20,6 +20,7 @@ body {
 }
 
 
+
 /* Header and navbar styling */
 /* Header styling and making it a flex contianer to space items at start/end of main axis. */
 header {
@@ -63,6 +64,7 @@ header nav ul li {
 }
 
 
+
 /* Styling the main element and children */
 /* Adjusting the size of the aside elements */
 aside {
@@ -71,7 +73,7 @@ aside {
 /* Adjusting the size of the aside headers */
 main section aside h1 {
     color: var(--main-color);
-    font-size: 170%;
+    font-size: 160%;
 }
 /* Removing standard styling for anchor and changing the color */
 a {
@@ -85,6 +87,14 @@ a:hover {
 /* Adding padding to the about me section */
 #about-me p {
     line-height: 1.5;
+}
+/* Styling the image in the about me section */
+#about-me-img {
+    border: solid var(--main-color);
+    border-radius: 100%;
+    display: block;
+    height: 100px;
+    float: left;
 }
 /* Adjusting the size of the article elements */
 article {
@@ -103,9 +113,11 @@ section aside {
     padding: 0 1%;
     text-align: end;
 }
+/* Centering the anchors in the contact me section */
 #contact-info-container {
     text-align: center;
 }
+/* Making the anchors inline, adding spacing and size */
 #contact-info-container a {
     display: inline-block;
     font-size: 120%;
@@ -115,7 +127,7 @@ section aside {
 
 
 
-/* Styling the images in the webpage */
+/* Styling the images in the main section */
 /* Styling/sizing the backsplash container */
 #backsplash-container{
     height: 250px;
@@ -170,22 +182,47 @@ footer {
 }
 
 
-/* Media queries for responsive design for mobile */
+
+/* Media queries for responsive design for airpod (768 px) */
 @media screen and (max-width: 768px) {
     /* Adjusting the header alignment so that the nav bar is centered */
     header {
-        justify-content: center;
+        display: block;
         text-align: center;
     }
     /* Adjusting the unordered list into a flexbox so the list elements can be easily aligned */
     header nav ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
     /* Adding margin and width to ensure one list element takes up the entire row */
     header nav ul li {
-        margin: 0 25px;
         min-width: 100%;
     }
 }
+
+/* Media queries for responsive design below 700px (aside elements merge with the articles at 700px) */
+@media screen and (max-width: 700px) {
+    /* Make the asides into headers by removing the flex property and center all text in section elements */
+    main section {
+        display: block;
+        text-align: center;
+    }
+    /* Create a bottom border to separate headers from the articles and add spacing as needed. */
+    main aside {
+        border-bottom: thick solid var(--main-color);
+        border-right: hidden;
+        margin-bottom: 2%;
+        text-align: center;
+        width: 100%;
+    }
+    /* Make the width of the article 100% */
+    main article {
+        width: 100%;
+    }
+    /* Remove the image from the aside to ensure proper formatting in the about me section*/
+    #about-me-img {
+        display: none;
+    }
+} 
