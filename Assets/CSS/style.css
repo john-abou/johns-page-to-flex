@@ -1,0 +1,181 @@
+/* Styling that gets applied to a majority of the page */
+/* Defining custom properties for colors used multiple times */
+:root{
+    --main-color: #2a607c;
+}
+/* Adding a smooth scroll feature */
+html {
+    scroll-behavior: smooth;
+}
+/* Universal/Body Styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+/* Background color */
+body {
+    background-color: aliceblue;
+}
+
+
+/* Header and navbar styling */
+/* Header styling and making it a flex contianer to space items at start/end of main axis. */
+header {
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+}
+/* Enlarging the h1 header */
+header h1 {
+    display: inline-block;
+    font-size: 250%;
+}
+/* Adding spacing in the navbar */
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+/* Removing bullet points from the list */ 
+header nav ul {
+    list-style-type: none;
+}
+/* Making the list items inline and adding margin b/w list items */
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+/* Coloring the anchor/list items */
+.internal-link {
+    color: white;
+    text-decoration: none;
+}
+.internal-link:hover {
+    color:  #E1D9D1;
+}
+
+
+/* Styling the main element and children */
+/* Adjusting the size of the aside elements */
+aside {
+    width: 18%;
+}
+/* Adjusting the size of the aside headers */
+main section aside h1 {
+    color: var(--main-color);
+    font-size: 170%;
+}
+/* Adding padding to the about me section */
+#about-me p {
+    line-height: 1.5;
+}
+/* Adjusting the size of the article elements */
+article {
+    width: 80%;
+}
+/* Adding spacing to the sections and making the section flex to align the aside/article elements  */
+section{
+    display: flex;
+    margin: 4% 5%;
+    justify-content: center;
+}
+/* Adding the border between the aside and article elements */
+section aside {
+    border-right: thick solid  var(--main-color);
+    margin: 0 2%;
+    padding: 0 1%;
+    text-align: end;
+}
+#contact-info-container {
+    text-align: center;
+}
+#contact-info-container a {
+    display: inline-block;
+    font-size: 120%;
+    padding: 3% 0;
+    width: 20%;
+}
+
+
+
+/* Styling the images in the webpage */
+/* Styling/sizing the backsplash container */
+#backsplash-container{
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+
+}
+/*Styling the backsplash*/
+#img-backsplash {
+    object-fit: cover;
+}
+/* Adding size/spacing to the larger displayed project */
+#big-display {
+    border: solid 2px #2a607c;
+    width: 60%;
+    margin: 0 10%;
+}
+/* Making the larger displayed img centered */
+#big-display-container {
+    text-align: center;
+    width: 100%;
+}
+/* Adding size/style to the images of the smaller displayed projects */
+.small-display {
+    border: solid 2px #2a607c;
+    height: 150px;
+    margin: 2% 1%;
+    object-fit: cover;
+    width: 40%;
+}
+/* Making the smaller display imgs centered */
+.small-display-container {
+    text-align: center;
+    width: 100%;
+}
+/* Adding a tooltip to the anchors */
+.project:hover::before {
+    content: attr(data-descr);
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Styling the footer -- adding padding, text alignment and color to the element */
+footer {
+    background-color: var(--main-color);
+    padding: 3% 0 2% 0;
+    text-align: center;
+}
+
+
+/* Media queries for responsive design for mobile */
+@media screen and (max-width: 768px) {
+    /* Adjusting the header alignment so that the nav bar is centered */
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+    /* Adjusting the unordered list into a flexbox so the list elements can be easily aligned */
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /* Adding margin and width to ensure one list element takes up the entire row */
+    header nav ul li {
+        margin: 0 25px;
+        min-width: 100%;
+    }
+}
