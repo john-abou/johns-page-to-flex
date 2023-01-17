@@ -73,6 +73,15 @@ main section aside h1 {
     color: var(--main-color);
     font-size: 170%;
 }
+/* Removing standard styling for anchor and changing the color */
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+/* Adding a new color when the user hovers over the link */
+a:hover {
+    color: lightblue;
+}
 /* Adding padding to the about me section */
 #about-me p {
     line-height: 1.5;
@@ -155,6 +164,7 @@ section aside {
 /* Styling the footer -- adding padding, text alignment and color to the element */
 footer {
     background-color: var(--main-color);
+    color: white;
     padding: 3% 0 2% 0;
     text-align: center;
 }
