@@ -13,6 +13,18 @@ I also learned that making a webpage responsive on multiple screensizes is good 
 ## Usage
 To learn more about me and my experience as a developer, check out my webpage that hosts my projects and some of my other interests. All the links in the navbar will direct you to different parts of my website where you can learn more about me. 
 
+### Desktop webpage screenshot
+<img src="./Assets/Images/Website Screenshot.png">
+<br>
+
+### iPad webpage screenshot
+<img src="./Assets/Images/iPad Screenshot.png">
+<br>
+
+### Mobile webpage screenshot
+<img src="./Assets/Images/Mobile Screenshot.png">
+<br>
+
 ## Credits
 * Shoot out to my tutor who helped me fix some of the Git/Github issues I was having. 
 
