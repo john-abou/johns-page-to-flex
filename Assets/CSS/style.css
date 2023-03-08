@@ -52,7 +52,7 @@ header nav ul {
 /* Making the list items inline and adding margin b/w list items */
 header nav ul li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 26px;
 }
 /* Coloring the anchor/list items */
 .internal-link {
